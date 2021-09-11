@@ -19,13 +19,12 @@ IM32_CE_WEIGHTS = 'weights/32x32-CE-weights.h5'
 def wide_residual_network(depth=28, width=2, dropout_rate=0.0, weights=None, input_tensor=None, input_shape=None):
     """
     Instantiate the Wide Residual Network architecture, optionally loading weights pre-trained on ImageNet32x32,
-    ImageNet64x43, ImageNet224x224 using cross-entropy and triplet loss.
+     using cross-entropy.
 
     :param depth: number or layers in the DenseNet
     :param width: multiplier to the ResNet width (number of filters)
     :param dropout_rate: dropout rate
-    :param weights: one of `None` (random initialization) or 'imagenet32', 'imagenet64', 'imagenet-full',
-                    'imagenet-triplet
+    :param weights: one of `None` (random initialization) or 'imagenet'
     :param input_tensor: optional Keras tensor (i.e. output of `layers.Input()`) to use as image input for the models.
     :param input_shape:  shape tuple
     :return A tf.keras models instance.

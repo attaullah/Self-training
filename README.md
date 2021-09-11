@@ -1,5 +1,5 @@
 # Self-training
-This repository contains code for PhD thesis: "A Study of Self-training Variants for
+This repository contains code for the PhD thesis: "A Study of Self-training Variants for
 Semi-supervised Image Classification" (under examination) and publications.
 1. Sahito A., Frank E., Pfahringer B. (2019) Semi-supervised Learning Using Siamese Networks. In: Liu J., Bailey J. 
 (eds) AI 2019: Advances in Artificial Intelligence. AI 2019 . Lecture Notes in Computer Science, vol 11919. Springer, 
@@ -18,7 +18,7 @@ git clone https://github.com/attaullah/self-training.git
 cd self-training/
 ```
 ### Environment setup
-For creating conda environment, a yml  file `tf.yml` is provided for replicating setup.
+For creating a conda environment,  the yml  file `tf.yml` is provided for replicating the setup.
 
 ```bash
 conda env create -f tf.yml
@@ -33,32 +33,30 @@ pip install tensorflow_datasets
 ```
 By default, tensorflow_datasets package will save datasets at `~/ tensorflow_datasets/` directory.
 
-For PlantVillage dataset please follow instructions at
+For PlantVillage dataset [1] please follow instructions at
  [plant-disease-dataset](https://github.com/attaullah/downsampled-plant-disease-dataset). The downloaded files are 
-expected to be saved in `data/` directory. 
+expected to be saved in the `data/` directory. 
 
-### Pretrained weights
-For details about downloading pretrained weights, see [Trasnfer_learning](Transfer_learning.md).
 
 ### Repository Structure
-Here is the brief overview of the repository.
+Here is a brief overview of the repository.
 
 -`config/`: contains sample configurations file for running various experiments.
 
--`data_utils/`: provides helper functions for loading datasets, details of  datasets like number of initially labelled
+-`data_utils/`: provides helper functions for loading datasets, details of  datasets like the number of initially labelled
 examples: `n_label`, selection percentage of pseudo-labels for each iteration of self-training: `selection_percentile`,
-parameter `sigma` for LLGC and `tensorflow.keras` based dataloaders for training the network model.
+parameter `sigma` for LLGC and `tensorflow.keras` based data loaders for training the network model.
 
 -`losses/`: implementation of ArcFace, Contrastive, and Triplet loss.
 
--`models/`: provides implementation of custom `SIMPLE` convolutional network model used for MNIST, Fashion-MNIST, and 
-SVHN, `SSDL` and other custom convolutional network model used for CIFAR-10 and PlantVillages.
+-`models/`: provides the implementation of custom `SIMPLE` convolutional network model used for MNIST, Fashion-MNIST, and 
+SVHN, `SSDL` another custom convolutional network model used for CIFAR-10 and PlantVillages.
 
--`utils/`: contains implementation of LLGC and other utility function.
+-`utils/`: contains the implementation of LLGC and other utility functions.
 
 
 ## Example usage
-Training can be started using `train.py` script. Details of self-explanatory commandline 
+Training can be started using the `train.py` script. Details of self-explanatory command-line 
 arguments can be seen by passing `--helpfull` to it.
 
 
@@ -113,10 +111,10 @@ flags:
     (default: '1')
     (an integer)
  ```
-For running different experiments of self-training based on metric learning losses, visit
-[Metric-learning](Metric_learning.md) and for self-supervised,
-[Self-supervised](Self_supervised.md)
-## Citation 
+For running different experiments of self-training, visit [Metric-learning](Metric_learning.md), 
+[Transfer_learning](Transfer_learning.md) and [Self-supervised](Self_supervised.md).
+
+## Citation Information 
 If you use the provided code, kindly cite our paper.
 ```
 @misc{sahito2021better,
@@ -129,15 +127,8 @@ If you use the provided code, kindly cite our paper.
 }
 ```
 ## References
-1. Wide Residual Networks. Sergey Zagoruyko and Nikos Komodakis. In British
-Machine Vision Conference 2016. British Machine Vision Association, 2016.
-3. Distance metric learning for large margin nearest neighbour classification. Kilian Q Weinberger and Lawrence K Saul.
-Journal of Machine Learning Research,  10(2), 2009.
-4. Zhou, Dengyong, et al. "Learning with local and global consistency." Advances in neural information processing 
-systems. 2004.
-5. J, ARUN PANDIAN; GOPAL, GEETHARAMANI (2019), “Data for: Identification of Plant Leaf Diseases Using a 9-layer Deep 
+1. J, ARUN PANDIAN; GOPAL, GEETHARAMANI (2019), “Data for: Identification of Plant Leaf Diseases Using a 9-layer Deep 
 Convolutional Neural Network”, Mendeley Data, V1, doi: 10.17632/tywbtsjrjv.1
-
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

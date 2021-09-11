@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf
 
 # path to PlantVillage dataset containing train and test directories or plant**.npz for 32,64,and 96
-base_path = "../githubs/myrepos/downsampled-plant-disease-dataset/data/"
+base_path = "data/"
 
 
 def count(path, counter=0):
@@ -21,7 +21,6 @@ def plant_village_scratch(name):
     :param name: name with resolution size
     :return: Training and test images and labels
     """
-    # data_path = base_path+'datasets/plant-disease'
     validation_dir = base_path + '/test'
     train_dir = base_path + '/train'
     print('Dataset not found reading and writing from scratch train_dir=', train_dir)
