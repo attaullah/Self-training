@@ -13,10 +13,11 @@ def setup_flags():
     flags.DEFINE_enum(name="network", default="wrn-28-2", enum_values=["wrn-28-2", "simple", "vgg16",
                                                                                   "ssdl"],
                       help="network architecture.")
-    flags.DEFINE_boolean('weights', help="random or ImageNet pretrained weights", default=False)
+    flags.DEFINE_boolean('weights', help=" -noweights uses random weights or -weights uses ImageNet pretrained weights",
+                         default=False)
     flags.DEFINE_integer("batch_size", help="size of mini-batch", default=100)
     flags.DEFINE_integer('epochs', help="initial training epochs", default=200)
-    flags.DEFINE_boolean('semi', help="True: N-labelled training, False: All-labelled training", default=True)
+    flags.DEFINE_boolean('semi', help="-semi: N-labelled training and -nosemi : All-labelled training", default=True)
     flags.DEFINE_enum(name="lt", default="cross-entropy", enum_values=["cross-entropy", "triplet", "arcface",
                                                                        "contrastive"],
                       help="loss_type: cross-entropy, triplet,  arcface or contrastive.")
@@ -28,7 +29,9 @@ def setup_flags():
                       enum_values=["knn", "lda", "rf", "lr"])
     flags.DEFINE_float('margin', help="margin for triplet loss calculation", default=1.0)
     #  self-training related
-    flags.DEFINE_boolean("self_training",  help="apply self-training", default=False)
+    flags.DEFINE_boolean("self_training",  help=" -self_training: apply self-training and by default -noself_training, "
+                                                "which is either N-labelled or All-labeled training based on -semi flag"
+                         , default=False)
     flags.DEFINE_enum(name="confidence_measure", default="1-nn", enum_values=["1-nn", "llgc"],
                       help="confidence measure for pseudo-label selection.")
     flags.DEFINE_integer('meta_iterations', help="number of meta_iterations", default=25)

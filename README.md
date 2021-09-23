@@ -63,21 +63,21 @@ arguments can be seen by passing `--helpfull` to it.
 ```bash
  python train.py --helpfull
  
-       USAGE: pretrain.py [flags]
+       USAGE: train.py [flags]
 flags:
 
   --dataset: <cifar10|mnist|fashion_mnist|svhn_cropped|plant32|plant64|plant96>: dataset name
     (default: 'cifar10')
   --network: <wrn-28-2|simple|vgg16|ssdl>: network architecture.
     (default: 'wrn-28-2')
-  --[no]weights: random or ImageNet pretrained weights
+  --[no]weights: -noweights uses random weights and -weights uses ImageNet pretrained weights
   --batch_size: size of mini-batch
     (default: '100')
     (an integer)
   --epochs: initial training epochs
     (default: '200')
     (an integer)
-  --[no]semi: True: N-labelled training, False: All-labelled training
+  --[no]semi: -semi: N-labelled training and -nosemi : All-labelled training
       (default: 'true')
   --lt: <cross-entropy|triplet|arcface|contrastive>: loss_type: cross-entropy, triplet,  arcface or contrastive.
     (default: 'cross-entropy')
@@ -91,8 +91,8 @@ flags:
   --margin: margin for triplet loss calculation
     (default: '1.0')
     (a number)
- 
-  --[no]self_training: apply self-training
+  --[no]self_training: -self_training: apply self-training and by default -noself_training, which is either N-labelled 
+                        or All-labeled training based on -semi flag
     (default: 'false')
   --confidence_measure: <1-nn|llgc>: confidence measure for pseudo-label selection.
     (default: '1-nn')
