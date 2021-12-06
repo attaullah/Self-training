@@ -117,13 +117,12 @@ For running different experiments of self-training, visit [Metric-learning](Metr
 ## Citation Information 
 If you use the provided code, kindly cite our paper.
 ```
-@misc{sahito2021better,
-      title={Better Self-training for Image Classification through Self-supervision}, 
-      author={Attaullah Sahito and Eibe Frank and Bernhard Pfahringer},
-      year={2021},
-      eprint={2109.00778},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@phdthesis{attaullah2021self,
+    title    = {A study of self-training variants for semi-supervised image classification},
+    school   = {The University of Waikato},
+    author   = {Attaullah Sahito},
+    year     = {2021}, 
+    url      = {https://hdl.handle.net/10289/14678}
 }
 ```
 ## References
