@@ -88,14 +88,21 @@ The values for the dataset can be one of `cifar10`,`svhn_cropped`,`plant32`, `pl
 
 ## Citation information
 ```
-@misc{sahito2021better,
-      title={Better Self-training for Image Classification through Self-supervision}, 
-      author={Attaullah Sahito and Eibe Frank and Bernhard Pfahringer},
-      year={2021},
-      eprint={2109.00778},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@InProceedings{10.1007/978-3-030-97546-3_52,
+author="Sahito, Attaullah
+and Frank, Eibe
+and Pfahringer, Bernhard",
+editor="Long, Guodong
+and Yu, Xinghuo
+and Wang, Sen",
+title="Better Self-training for Image Classification Through Self-supervision",
+booktitle="AI 2021: Advances in Artificial Intelligence",
+year="2022",
+publisher="Springer International Publishing",
+address="Cham",
+pages="645--657",
 }
+
 ```
 ## References
 1. Distance metric learning for large margin nearest neighbour classification. Kilian Q Weinberger and Lawrence K Saul.
