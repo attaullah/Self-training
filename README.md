@@ -8,8 +8,8 @@ Cham. [DOI:978-3-030-35288-2_47](https://link.springer.com/chapter/10.1007/978-3
 Image Classification. In: Gallagher M., Moustafa N., Lakshika E. (eds) AI 2020: Advances in Artificial Intelligence.
 AI 2020 . Lecture Notes in Computer Science, vol 12576. Springer, Cham. 
 [DOI:978-3-030-64984-5_34](https://doi.org/10.1007/978-3-030-64984-5_34)
-3. Sahito A., Frank E., Pfahringer B. (2021) Better Self-training for Image Classification through Self-supervision. 
-[arXiv:2109.00778](https://arxiv.org/abs/2109.00778)
+3. Sahito, A., Frank, E., Pfahringer, B. (2022). Better Self-training for Image Classification Through Self-supervision. In: Long, G., Yu, X., Wang, S. (eds) AI 2021: Advances in Artificial Intelligence. AI 2022. Lecture Notes in Computer Science(), vol 13151. Springer, Cham 
+[DOI:978-3-030-97546-3_52]([https://arxiv.org/abs/2109.00778](https://doi.org/10.1007/978-3-030-97546-3_52))
 
 ## Getting started
 Start with cloning the repo:
